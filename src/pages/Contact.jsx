@@ -86,7 +86,7 @@ const Contact = () => {
                                 />
                             </div>
                             <div>
-                                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#666' }}>Message</label>
+                                <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem', color: '#666' }}>Message.</label>
                                 <textarea
                                     rows="5"
                                     name="message"
@@ -100,7 +100,7 @@ const Contact = () => {
                                 className="btn btn-primary"
                                 style={{ marginTop: '1rem' }}
                             >
-                                Send Message
+                                Send Message .
                             </button>
                         </form>
                     </div>
