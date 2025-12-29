@@ -1,0 +1,221 @@
+:root {
+  /* Pastel & Neon Palette */
+  --color-primary: #FF9EAA;
+  /* Pastel Pink */
+  --color-secondary: #FFD0D0;
+  /* Peach */
+  --color-accent: #3AA6B9;
+  /* Mint/Teal */
+  --color-lavender: #E5BEEC;
+  --color-gold: #FFD700;
+  --color-neon-pink: #FF1E8F;
+  --color-background: #FFF9F9;
+  --color-text: #2D2D2D;
+  --color-text-light: #666666;
+
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-fun: 'Pacifico', cursive;
+
+  /* Shadows & Radius */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px rgba(255, 158, 170, 0.5);
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 158, 170, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(58, 166, 185, 0.1) 0%, transparent 20%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: #2D2D2D;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-fun {
+  font-family: var(--font-fun);
+}
+
+/* Antigravity Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-neon-pink));
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 30, 143, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, var(--color-neon-pink), var(--color-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 30, 143, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.bg-pink {
+  background-color: var(--color-background);
+}
+
+/* Overridden to just be background for now, or light pink */
+
+.text-gradient {
+  background: linear-gradient(to right, #FF9EAA, #FF1E8F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
